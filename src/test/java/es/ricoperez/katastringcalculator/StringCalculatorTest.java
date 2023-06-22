@@ -13,4 +13,9 @@ public class StringCalculatorTest {
         assertThat(calculator.sum("")).isEqualTo(0);
     }
 
+    @Test
+    void should_return_the_same_number_when_input_is_a_single_number() {
+        StringCalculator calculator = new StringCalculator();
+        assertThat(calculator.sum("1")).isEqualTo(1);
+    }
 }
