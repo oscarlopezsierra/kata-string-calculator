@@ -37,4 +37,9 @@ public class StringCalculatorTest {
         assertThat(calculator.sum("1,2,b,3,12a")).isEqualTo(6);
         assertThat(calculator.sum("1,2,b,3,a12,4")).isEqualTo(10);
     }
+
+    @Test
+    void should_ignore_empty_elements() {
+        assertThat(calculator.sum("1,,2")).isEqualTo(3);
+    }
 }
