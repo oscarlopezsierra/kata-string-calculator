@@ -1,7 +1,7 @@
 package es.ricoperez.katastringcalculator;
 
 public class StringCalculator {
-    public Integer sum(String input) {
+    public Integer sumOf(String input) {
         if (input == null || input.isEmpty()) {
             return 0;
         }
