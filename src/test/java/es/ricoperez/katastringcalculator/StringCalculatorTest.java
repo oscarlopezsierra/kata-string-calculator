@@ -25,4 +25,12 @@ public class StringCalculatorTest {
         assertThat(calculator.sum("1,2")).isEqualTo(3);
         assertThat(calculator.sum("1,2,3")).isEqualTo(6);
     }
+
+    @Test
+    void should_ignore_elements_that_arent_numbers() {
+        StringCalculator calculator = new StringCalculator();
+        assertThat(calculator.sum("1,a,2")).isEqualTo(3);
+        assertThat(calculator.sum("1,2,b,3,12a")).isEqualTo(6);
+        assertThat(calculator.sum("1,2,b,3,a12,4")).isEqualTo(10);
+    }
 }
