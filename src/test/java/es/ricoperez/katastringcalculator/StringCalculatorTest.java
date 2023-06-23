@@ -18,4 +18,11 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertThat(calculator.sum("1")).isEqualTo(1);
     }
+
+    @Test
+    void should_return_the_sum_of_two_or_more_numbers_when_input_is_two_or_more_numbers_separated_by_commas() {
+        StringCalculator calculator = new StringCalculator();
+        assertThat(calculator.sum("1,2")).isEqualTo(3);
+        assertThat(calculator.sum("1,2,3")).isEqualTo(6);
+    }
 }
