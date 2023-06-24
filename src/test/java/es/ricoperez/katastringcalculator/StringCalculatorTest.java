@@ -42,4 +42,11 @@ public class StringCalculatorTest {
     void should_ignore_empty_elements() {
         assertThat(calculator.sumOf("1,,2")).isEqualTo(3);
     }
+
+    @Test
+    void string_could_contain_a_delimiter() {
+        assertThat(calculator.sumOf("//;/1;2")).isEqualTo(3);
+        assertThat(calculator.sumOf("//*/4*4*8")).isEqualTo(16);
+        assertThat(calculator.sumOf("//^/4^4^8")).isEqualTo(16);
+    }
 }

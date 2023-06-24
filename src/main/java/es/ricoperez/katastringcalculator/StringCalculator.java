@@ -6,6 +6,14 @@ public class StringCalculator {
             return 0;
         }
 
+        if (input.startsWith("//") && input.length() > 4 && input.charAt(3) == '/') {
+            String character = input.substring(2, 3);
+            if (!Character.isDigit(character.charAt(0))) {
+                input = input.substring(4);
+                input = input.replace(character, ",");
+            }
+        }
+
         String[] numbers = input.split(",");
 
         int sum = 0;
