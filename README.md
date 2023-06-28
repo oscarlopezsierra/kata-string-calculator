@@ -33,3 +33,5 @@ inclinada para indicar el final de la expresión (por ejemplo, para usar el punt
 * "1,a,2,,b,3a,4" -> 7
 * "//;/1;2" -> 3
 * "//#/1#2#5" -> 8
+* "//#1,2,3" -> 5
+* "//#/1#2,3#8" -> 9

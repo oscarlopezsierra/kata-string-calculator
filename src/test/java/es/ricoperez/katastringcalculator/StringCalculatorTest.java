@@ -29,6 +29,7 @@ public class StringCalculatorTest {
     void should_return_the_sum_of_two_or_more_numbers_when_input_is_two_or_more_numbers_separated_by_commas() {
         assertThat(calculator.sumOf("1,2")).isEqualTo(3);
         assertThat(calculator.sumOf("1,2,3")).isEqualTo(6);
+        assertThat(calculator.sumOf("32,12,3")).isEqualTo(47);
     }
 
     @Test
@@ -48,5 +49,8 @@ public class StringCalculatorTest {
         assertThat(calculator.sumOf("//;/1;2")).isEqualTo(3);
         assertThat(calculator.sumOf("//*/4*4*8")).isEqualTo(16);
         assertThat(calculator.sumOf("//^/4^4^8")).isEqualTo(16);
+        assertThat(calculator.sumOf("//#1,2,3")).isEqualTo(5);
+        assertThat(calculator.sumOf("//#/1#2,3#8")).isEqualTo(9);
     }
+
 }
